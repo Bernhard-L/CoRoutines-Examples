@@ -5,30 +5,18 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
-#include <iomanip>
-#include <time.h>
 #include <random>
-
-// #include <future>
-// #include <coroutine>
 
 #include <cppcoro/async_generator.hpp>
 #include <cppcoro/generator.hpp>
 #include <cppcoro/task.hpp>
 #include <cppcoro/sync_wait.hpp>
 
-#include <windows.h>
-
 constexpr int _maxValue = 20;
 
 void print_time()
 {
     std::cout << std::format("{} \t ", std::chrono::system_clock::now()) << std::flush;
-}
-
-cppcoro::task<std::chrono::seconds> randomSeconds()
-{
-    co_return std::chrono::seconds(1 + rand() % 5 );
 }
 
 int random_value_synchron()
@@ -56,13 +44,6 @@ cppcoro::async_generator<std::string> produce_items()
         std::cout << "produced " << i << '\n';
         co_yield i;
         ++v;
-    }
-}
-
-cppcoro::generator<int> generatorForNumbers(int begin, int inc = 1)
-{
-    for (int i = begin;; i += inc) {
-        co_yield i;
     }
 }
 
