@@ -24,6 +24,7 @@
     <ProjectGuid>{92482c78-dedd-403e-9b3c-dda0af3a0fc7}</ProjectGuid>
     <RootNamespace>CoroTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CoroExampes</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -148,7 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CoroTest.cpp" />
+    <ClCompile Include="CoroExamples.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="conanfile.txt" />
