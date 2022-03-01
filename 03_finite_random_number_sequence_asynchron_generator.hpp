@@ -45,6 +45,8 @@ namespace finite_random_number_sequence_asynchron_generator {
         std::cout << "finite_random_number_sequence_asynchron_generator max(" << _maxValue << ")" << std::endl << std::endl;
 
         cppcoro::sync_wait(consume_items(3));
+        cppcoro::sync_wait(consume_items(3));
+        cppcoro::sync_wait(consume_items(3));
         cppcoro::sync_wait(consume_items(4));
         cppcoro::sync_wait(consume_items(5));
 

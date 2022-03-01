@@ -154,6 +154,10 @@
   <ItemGroup>
     <Text Include="conanfile.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="01_simple_number_sequence_asynchron_generator.hpp" />
+    <ClInclude Include="04_finite_number_sequence_stacked_tasks_asynchron_generator.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

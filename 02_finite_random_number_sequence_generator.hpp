@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include "random_number.hpp"
-
 #include <cppcoro/generator.hpp>
 
+#include "random_number.hpp"
+
 namespace finite_random_number_sequence_generator {
-constexpr unsigned int _maxValue = 10;
+    constexpr unsigned int _maxValue = 10;
 
     cppcoro::generator<unsigned int> produce_items()
     {
