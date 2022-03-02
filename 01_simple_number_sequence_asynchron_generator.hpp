@@ -11,20 +11,17 @@ namespace simple_number_sequence_asynchron_generator {
     {
         unsigned int x = 0;
         unsigned int y = 1;
-        do 
+        while (y < stopAfter)
         {
-            co_yield x + y;
-
-            unsigned int z = y;
-            y += x;
-            std::swap(x, z);
+            x += y;
+            std::swap(x, y);
+            co_yield y;
         }
-        while (y < stopAfter);
     }
 
     cppcoro::task<> consume_items(unsigned int stopAfter) noexcept
     {
-        std::cout << "fibunacci items up to value " << stopAfter << std::endl;
+        std::cout << "stopping after the next fibunacci after " << stopAfter << std::endl;
 
         for
             co_await(auto const& s
