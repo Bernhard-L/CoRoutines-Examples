@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="01_simple_number_sequence_asynchron_generator.hpp" />
     <ClInclude Include="04_finite_number_sequence_stacked_generators_synchron_generator.hpp" />
+    <ClInclude Include="05_finite_number_sequence_stacked_async_generators.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
